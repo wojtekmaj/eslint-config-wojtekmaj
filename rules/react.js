@@ -22,6 +22,13 @@ module.exports = {
         },
       },
     ],
+    'react/jsx-boolean-value': [
+      'error',
+      'never',
+      {
+        always: ['defaultValue', 'value'],
+      },
+    ],
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
     'react/sort-prop-types': 'error',
