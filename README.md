@@ -1,3 +1,5 @@
+![CI](https://github.com/wojtekmaj/eslint-config-wojtekmaj/workflows/CI/badge.svg)
+
 # eslint-config-wojtekmaj
 
 Basically `eslint-config-airbnb`, with a few differences:
