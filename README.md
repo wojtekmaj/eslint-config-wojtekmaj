@@ -1,4 +1,4 @@
-![CI](https://github.com/wojtekmaj/eslint-config-wojtekmaj/workflows/CI/badge.svg)
+[![CI](https://github.com/wojtekmaj/eslint-config-wojtekmaj/workflows/CI/badge.svg)](https://github.com/wojtekmaj/eslint-config-wojtekmaj/actions)
 
 # eslint-config-wojtekmaj
 
