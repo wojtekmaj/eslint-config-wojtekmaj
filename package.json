@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-wojtekmaj",
+  "version": "0.4.0",
+  "main": "index.js",
+  "repository": "https://github.com/wojtekmaj/eslint-config.git",
+  "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.4.0",
+    "eslint-plugin-react": "^7.21.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.0"
+  },
+  "peerDependencies": {
+    "eslint": "^7.0.0"
+  }
+}
