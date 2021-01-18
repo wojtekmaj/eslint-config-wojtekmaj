@@ -21,5 +21,15 @@
   },
   "peerDependencies": {
     "eslint": "^7.0.0"
-  }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "browser.js",
+    "index.js",
+    "node.js",
+    "react.js",
+    "rules/",
+    "utils/"
+  ]
 }
