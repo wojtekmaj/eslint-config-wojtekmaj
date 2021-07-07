@@ -17,13 +17,10 @@
     "eslint-plugin-react-hooks": "^4.2.0"
   },
   "devDependencies": {
-    "eslint": "^7.12.0"
+    "eslint": "~7.19.0"
   },
   "peerDependencies": {
     "eslint": "^7.0.0"
-  },
-  "resolutions": {
-    "rimraf@2.6.3": "^2.6.3"
   },
   "files": [
     "LICENSE",
