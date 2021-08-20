@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'airbnb',
+    'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
@@ -10,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    'jsx-a11y',
     'react',
     'react-hooks',
   ],
