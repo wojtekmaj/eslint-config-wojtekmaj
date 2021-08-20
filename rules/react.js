@@ -32,6 +32,8 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
     'react/sort-prop-types': 'error',
     'react/state-in-constructor': ['error', 'never'],
