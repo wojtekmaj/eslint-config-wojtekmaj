@@ -23,5 +23,11 @@ module.exports = {
         jest: true,
       },
     },
+    {
+      files: ['webpack.config.js'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
   ],
 };
