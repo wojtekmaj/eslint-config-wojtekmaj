@@ -31,5 +31,6 @@
     "react.js",
     "rules/",
     "utils/"
-  ]
+  ],
+  "packageManager": "yarn@3.1.0"
 }
