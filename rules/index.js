@@ -1,20 +1,29 @@
 module.exports = {
-  extends: [
-    'airbnb-base',
-    'eslint:recommended',
-  ],
+  env: {
+    es6: true,
+    node: true,
+  },
+  extends: ['eslint:recommended', 'plugin:import/recommended'],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  env: {
-    es6: true,
-  },
   rules: {
-    'import/no-cycle': 'off',
-    'import/prefer-default-export': 'off',
-    'no-await-in-loop': 'warn',
-    'no-plusplus': 'off',
+    'no-alert': 'warn',
+    'no-console': 'warn',
+    'no-unused-vars': [
+      'error',
+      {
+        ignoreRestSiblings: true,
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   overrides: [
     {

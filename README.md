@@ -2,12 +2,21 @@
 
 # eslint-config-wojtekmaj
 
-Basically `eslint-config-airbnb`, with a few differences:
+Set of default, recommended rules from:
+* ESLint itself,
+* `eslint-plugin-import`,
+* `eslint-plugin-jsx-a11y`,
+* `eslint-plugin-react`,
+* `eslint-plugin-react-hooks`
 
+with a few enhancements:
 * All required plugins are marked as `dependencies`, not `peerDependencies`, so you don't need to install them manually.
+  Note: Since ESLint 8.0.0, it will work just fine with Yarn PnP.
 * Files matching `**/*.spec.js'`, `**/*.spec.jsx`, `**/__tests__/*` patterns automatically detect `jest` environment, so you can use `test`, `describe`, `it`, `expect` globals.
 * Certain rules were overwritten (details below).
-* React flavors also inherits rules from `react/recommended` and `react-hooks/recommended`.
+* React flavor assumes JSX automatic runtime is turned on.
+
+This config is designed to be run alongside Prettier.
 
 ## Flavors
 
@@ -19,16 +28,13 @@ Basically `eslint-config-airbnb`, with a few differences:
 * React - `wojtekmaj/react` - Browser flavor + React-specific rules.
 * React (no automatic runtime) - `wojtekmaj/react-no-automatic-runtime` - Browser flavor + React-specific rules, for legacy projects with automatic runtime disabled.
 
-## Overwritten rules
-
-`eslint-config-wojtekmaj` is based on `eslint-config-airbnb`, with certain rules overwritten:
+## Overwritten/added rules
 
 ### Basic flavor
 
-* `import/no-cycle`: Turned off.
-* `import/prefer-default-export`: Turned off.
-* `no-await-in-loop`: Set to `"warn"`.
-* `no-plusplus`: Turned off.
+* `no-alert`: Set to `"warn"`.
+* `no-console`: Set to `"warn"`, with the exception of files only executed internally e.g. Webpack config files.
+* `no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
 
 ### Node.js flavor
 
@@ -40,9 +46,6 @@ None
 
 ### React flavor
 
-* `jsx-a11y/label-has-associated-control`: Changed configuration. Requires id *or* nesting, not id *and* nesting.
-* `react/jsx-boolean-value`: Changed configuration. Added exceptions for `defaultValue` and `value` props.
-* `react/jsx-props-no-spreading`: Turned off.
-* `react/require-default-props`: Turned off.
-* `react/sort-prop-types`: Turned on.
-* `react/state-in-constructor`: Changed configuration. Set to `"never"`.
+* `react/jsx-uses-react`: Turned off (assumes JSX automatic runtime is turned on).
+* `react/no-array-index-key`: Set to `"warn"`.
+* `react/react-in-jsx-scope`: Turned off (assumes JSX automatic runtime is turned on).
