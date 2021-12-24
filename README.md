@@ -11,11 +11,13 @@ Basically `eslint-config-airbnb`, with a few differences:
 
 ## Flavors
 
-`eslint-config-wojtekmaj` comes in 3 flavors:
+`eslint-config-wojtekmaj` comes in several flavors:
 
 * Basic - `wojtekmaj`
 * Node.js - `wojtekmaj/node` - Basic flavor + Node.js-specific rules.
-* React - `wojtekmaj/react` - Basic flavor + React-specific rules.
+* Browser - `wojtekmaj/browser` - Basic flavor + Browser-specific rules.
+* React - `wojtekmaj/react` - Browser flavor + React-specific rules.
+* React (no automatic runtime) - `wojtekmaj/react-no-automatic-runtime` - Browser flavor + React-specific rules, for legacy projects with automatic runtime disabled.
 
 ## Overwritten rules
 
@@ -29,6 +31,10 @@ Basically `eslint-config-airbnb`, with a few differences:
 * `no-plusplus`: Turned off.
 
 ### Node.js flavor
+
+None
+
+### Browser flavor
 
 None
 
