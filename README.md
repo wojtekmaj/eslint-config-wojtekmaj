@@ -32,6 +32,7 @@ This config is designed to be run alongside Prettier.
 
 ### Basic flavor
 
+* `import/no-named-as-default`: Turned off.
 * `no-alert`: Set to `"warn"`.
 * `no-console`: Set to `"warn"`, with the exception of files only executed internally e.g. Webpack config files.
 * `no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
