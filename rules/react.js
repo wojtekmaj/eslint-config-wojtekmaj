@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'react/jsx-uses-react': 'off',
     'react/no-array-index-key': 'warn',
+    'react/no-danger': 'warn',
     'react/react-in-jsx-scope': 'off',
   },
   settings: {
