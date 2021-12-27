@@ -18,6 +18,7 @@ module.exports = {
     ],
   },
   settings: {
+    'import/ignore': ['node_modules'],
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
