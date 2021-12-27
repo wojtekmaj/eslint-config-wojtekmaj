@@ -1,6 +1,5 @@
 module.exports = {
   extends: [
-    'airbnb',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -10,33 +9,16 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'jsx-a11y',
-    'react',
-    'react-hooks',
-  ],
+  plugins: ['jsx-a11y', 'react', 'react-hooks'],
   rules: {
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        required: {
-          some: ['id', 'nesting'],
-        },
-      },
-    ],
-    'react/jsx-boolean-value': [
-      'error',
-      'never',
-      {
-        always: ['defaultValue', 'value'],
-      },
-    ],
-    'react/jsx-props-no-spreading': 'off',
     'react/jsx-uses-react': 'off',
+    'react/no-array-index-key': 'warn',
     'react/react-in-jsx-scope': 'off',
-    'react/require-default-props': 'off',
-    'react/sort-prop-types': 'error',
-    'react/state-in-constructor': ['error', 'never'],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   overrides: [
     {
@@ -46,9 +28,4 @@ module.exports = {
       },
     },
   ],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
 };
