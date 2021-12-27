@@ -9,6 +9,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/no-named-as-default': 'off',
     'no-alert': 'warn',
     'no-console': 'warn',
     'no-unused-vars': [
