@@ -10,8 +10,6 @@ module.exports = {
   },
   rules: {
     'import/no-named-as-default': 'off',
-    'no-alert': 'warn',
-    'no-console': 'warn',
     'no-unused-vars': [
       'error',
       {
