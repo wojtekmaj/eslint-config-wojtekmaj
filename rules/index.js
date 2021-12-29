@@ -17,6 +17,7 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
+    'valid-typeof': ['error', { requireStringLiterals: true }],
   },
   settings: {
     'import/ignore': ['node_modules'],
