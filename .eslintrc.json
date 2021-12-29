@@ -1,6 +1,3 @@
 {
-  "extends": "./index.js",
-  "rules": {
-    "global-require": "off"
-  }
+  "extends": "./index.js"
 }
