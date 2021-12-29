@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     'import/no-named-as-default': 'off',
+    'no-template-curly-in-string': 'warn',
     'no-unused-vars': [
       'error',
       {

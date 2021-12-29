@@ -33,6 +33,7 @@ This config is designed to be run alongside Prettier.
 ### Basic flavor
 
 * `import/no-named-as-default`: Turned off.
+* `no-template-curly-in-string`: Set to `"warn"`.
 * `no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
 
 ### Node.js flavor
