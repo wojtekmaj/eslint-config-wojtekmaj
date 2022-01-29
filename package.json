@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wojtekmaj",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "main": "index.js",
   "repository": "https://github.com/wojtekmaj/eslint-config.git",
   "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
