@@ -26,7 +26,8 @@
     "browser.js",
     "index.js",
     "node.js",
-    "react.js"
+    "react.js",
+    "react-no-automatic-runtime.js"
   ],
   "packageManager": "yarn@3.1.0"
 }
