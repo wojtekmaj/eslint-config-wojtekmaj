@@ -2,7 +2,6 @@
   "name": "eslint-config-wojtekmaj",
   "version": "0.6.5",
   "main": "index.js",
-  "repository": "https://github.com/wojtekmaj/eslint-config.git",
   "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
   "scripts": {
     "lint": "eslint .",
@@ -29,5 +28,9 @@
     "react.js",
     "react-no-automatic-runtime.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wojtekmaj/eslint-config-wojtekmaj.git"
+  },
   "packageManager": "yarn@3.1.0"
 }
