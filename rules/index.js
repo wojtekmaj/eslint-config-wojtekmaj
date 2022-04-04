@@ -17,6 +17,7 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
+    'no-use-before-define': 'error',
     'valid-typeof': ['error', { requireStringLiterals: true }],
   },
   settings: {

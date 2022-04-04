@@ -35,6 +35,7 @@ This config is designed to be run alongside Prettier.
 * `import/no-named-as-default`: Turned off.
 * `no-template-curly-in-string`: Set to `"warn"`.
 * `no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
+* `no-use-before-define`: Set to `"error"`.
 * `valid-typeof`: Set to `"error"`.
 
 ### Node.js flavor
