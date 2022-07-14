@@ -14,6 +14,7 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/no-array-index-key': 'warn',
     'react/no-danger': 'warn',
+    'react/no-unused-prop-types': 'error',
     'react/react-in-jsx-scope': 'off',
   },
   settings: {

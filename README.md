@@ -52,3 +52,4 @@ None
 * `react/jsx-uses-react`: Turned off (assumes JSX automatic runtime is turned on).
 * `react/no-array-index-key`: Set to `"warn"`.
 * `react/react-in-jsx-scope`: Turned off (assumes JSX automatic runtime is turned on).
+* `react/no-unused-prop-types`: Set to `"error"`.
