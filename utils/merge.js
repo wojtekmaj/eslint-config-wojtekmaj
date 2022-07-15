@@ -7,10 +7,7 @@ function merge(a, ...others) {
     Object.keys(obj).forEach((key) => {
       if (typeof result[key] === 'object') {
         if (Array.isArray(result[key])) {
-          result[key] = [
-            ...result[key],
-            ...obj[key],
-          ];
+          result[key] = [...result[key], ...obj[key]];
         } else {
           result[key] = {
             ...result[key],

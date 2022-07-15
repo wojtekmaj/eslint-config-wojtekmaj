@@ -5,6 +5,7 @@
   "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
   "scripts": {
     "lint": "eslint .",
+    "postinstall": "husky install",
     "test": "yarn lint"
   },
   "dependencies": {
@@ -14,7 +15,10 @@
     "eslint-plugin-react-hooks": "^4.3.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "husky": "^8.0.0",
+    "prettier": "^2.5.0",
+    "pretty-quick": "^3.1.0"
   },
   "peerDependencies": {
     "eslint": "^7.0.0 || ^8.0.0"
