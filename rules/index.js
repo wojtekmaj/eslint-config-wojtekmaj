@@ -36,7 +36,7 @@ module.exports = {
       },
     },
     {
-      files: ['webpack.config.js'],
+      files: ['vite.config.js', 'webpack.config.js'],
       rules: {
         'no-console': 'off',
       },
