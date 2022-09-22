@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "postinstall": "husky install",
-    "prettier": "prettier --check .",
+    "prettier": "prettier --check . --cache",
     "test": "yarn lint && yarn prettier"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "husky": "^8.0.0",
-    "prettier": "^2.5.0",
+    "prettier": "^2.7.0",
     "pretty-quick": "^3.1.0"
   },
   "peerDependencies": {
