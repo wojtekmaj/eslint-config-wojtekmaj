@@ -30,7 +30,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.spec.js', '**/__tests__/*'],
+      files: ['**/*.spec.js', '**/*.spec.jsx', '**/*.spec.ts', '**/*.spec.tsx', '**/__tests__/*'],
       env: {
         jest: true,
       },

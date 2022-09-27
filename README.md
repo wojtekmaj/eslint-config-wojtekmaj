@@ -14,7 +14,7 @@ with a few enhancements:
 
 - All required plugins are marked as `dependencies`, not `peerDependencies`, so you don't need to install them manually.
   Note: Since ESLint 8.0.0, it will work just fine with Yarn PnP.
-- Files matching `**/*.spec.js`, `**/*.spec.jsx`, `**/__tests__/*` patterns automatically detect `jest` environment, so you can use `test`, `describe`, `it`, `expect` globals.
+- Files matching `**/*.spec.js`, `**/*.spec.jsx`, `**/*.spec.ts`, `**/*.spec.tsx`, `**/__tests__/*` patterns automatically detect `jest` environment, so you can use `test`, `describe`, `it`, `expect` globals.
 - Certain rules were overwritten (details below).
 - React flavor assumes JSX automatic runtime is turned on.
 
