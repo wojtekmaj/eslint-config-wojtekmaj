@@ -10,7 +10,7 @@
     "test": "yarn lint && yarn prettier"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.25.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0"
