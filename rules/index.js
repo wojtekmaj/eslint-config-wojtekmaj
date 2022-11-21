@@ -8,6 +8,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  plugins: ['import'],
   rules: {
     'import/no-named-as-default': 'off',
     'no-template-curly-in-string': 'warn',
