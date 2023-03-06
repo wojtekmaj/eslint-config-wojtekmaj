@@ -42,9 +42,22 @@ module.exports = {
       plugins: ['@typescript-eslint'],
     },
     {
-      files: ['vite.config.js', 'vite.config.ts', 'webpack.config.js'],
+      files: [
+        'vite.config.js',
+        'vite.config.ts',
+        'vitest.config.js',
+        'vitest.config.ts',
+        'webpack.config.js',
+      ],
       rules: {
         'no-console': 'off',
+      },
+    },
+    // Vitest uses ESM exports, which are not supported by eslint-plugin-import.
+    {
+      files: ['vitest.config.js', 'vitest.config.ts'],
+      rules: {
+        'import/no-unresolved': 'off',
       },
     },
   ],
