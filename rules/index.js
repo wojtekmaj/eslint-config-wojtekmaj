@@ -31,12 +31,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.spec.js', '**/*.spec.ts', '**/__tests__/*'],
-      env: {
-        jest: true,
-      },
-    },
-    {
       files: ['vite.config.js', 'webpack.config.js'],
       rules: {
         'no-console': 'off',

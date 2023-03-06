@@ -23,12 +23,5 @@ module.exports = {
       version: 'detect',
     },
   },
-  overrides: [
-    {
-      files: ['**/*.spec.jsx', '**/*.spec.tsx'],
-      env: {
-        jest: true,
-      },
-    },
-  ],
+  overrides: [],
 };
