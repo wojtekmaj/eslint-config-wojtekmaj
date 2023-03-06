@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: ['jsx-a11y', 'react', 'react-hooks'],
   rules: {
+    'react/jsx-no-leaked-render': 'error',
     'react/jsx-uses-react': 'off',
     'react/no-array-index-key': 'warn',
     'react/no-danger': 'warn',
