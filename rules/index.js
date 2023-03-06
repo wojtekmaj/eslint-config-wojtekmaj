@@ -42,7 +42,7 @@ module.exports = {
       plugins: ['@typescript-eslint'],
     },
     {
-      files: ['vite.config.js', 'webpack.config.js'],
+      files: ['vite.config.js', 'vite.config.ts', 'webpack.config.js'],
       rules: {
         'no-console': 'off',
       },
