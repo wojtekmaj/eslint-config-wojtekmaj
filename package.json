@@ -10,7 +10,7 @@
     "test": "yarn lint && yarn prettier"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint-plugin-import": "^2.25.0",
     "eslint-plugin-jsx-a11y": "^6.5.0",
