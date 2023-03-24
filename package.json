@@ -7,7 +7,8 @@
     "lint": "eslint .",
     "postinstall": "husky install",
     "prettier": "prettier --check . --cache",
-    "test": "yarn lint && yarn prettier"
+    "test": "yarn lint && yarn tsc && yarn prettier",
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.41.0",
