@@ -8,4 +8,12 @@ module.exports = {
   ],
   parser: requireResolveCwd('@typescript-eslint/parser'),
   plugins: ['@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        ignoreRestSiblings: true,
+      },
+    ],
+  },
 };
