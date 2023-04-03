@@ -19,7 +19,12 @@ module.exports = {
       },
     ],
     'no-use-before-define': 'error',
-    'valid-typeof': ['error', { requireStringLiterals: true }],
+    'valid-typeof': [
+      'error',
+      {
+        requireStringLiterals: true,
+      },
+    ],
   },
   settings: {
     'import/ignore': ['node_modules'],
