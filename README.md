@@ -5,16 +5,17 @@
 Set of default, recommended rules from:
 
 - ESLint itself,
+- `@typescript-eslint`
 - `eslint-plugin-import`,
 - `eslint-plugin-jsx-a11y`,
 - `eslint-plugin-react`,
 - `eslint-plugin-react-hooks`
 
-with a few enhancements:
+with a few changes and enhancements:
 
-- All required plugins are marked as `dependencies`, not `peerDependencies`, so you don't need to install them manually.
-  Note: Since ESLint 8.0.0, it will work just fine with Yarn PnP.
-- Files matching `**/*.spec.js`, `**/*.spec.jsx`, `**/*.spec.ts`, `**/*.spec.tsx`, `**/__tests__/*` patterns automatically detect `jest` environment, so you can use `test`, `describe`, `it`, `expect` globals.
+- **Automatic TypeScript detection**: `@typescript-eslint/parser` will parse your TypeScript files, provided that TypeScript has been installed in your project.
+- **Automatic Jest detection**: `jest` environment will be set for files matching `**/*.spec.js`, `**/*.spec.jsx`, `**/*.spec.ts`, `**/*.spec.tsx`, `**/__tests__/*` patterns, provided that Jest has been installed in your project.
+- **No need to install any plugins manually**: All required plugins and parsers are marked as `dependencies`, not `peerDependencies`, so you don't need to install them on your own.
 - Certain rules were overwritten (details below).
 - React flavor assumes JSX automatic runtime is turned on.
 
