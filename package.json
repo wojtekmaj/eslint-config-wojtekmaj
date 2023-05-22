@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wojtekmaj",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "main": "index.js",
   "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
   "scripts": {
