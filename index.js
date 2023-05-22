@@ -9,6 +9,7 @@ if (detectJest()) {
 
 if (detectTypeScript()) {
   rules.overrides.push(require('./overrides/index-typescript'));
+  rules.settings['import/resolver'].typescript = {};
 }
 
 module.exports = rules;
