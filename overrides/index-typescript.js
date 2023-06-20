@@ -16,5 +16,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-use-before-define': 'error',
+    'no-unused-vars': 'off',
+    'no-use-before-define': 'off',
   },
 };
