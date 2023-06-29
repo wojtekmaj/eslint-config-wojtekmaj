@@ -42,6 +42,7 @@ module.exports = {
         'vitest.config.js',
         'vitest.config.ts',
         'webpack.config.js',
+        'webpack.config.ts',
       ],
       rules: {
         'no-console': 'off',
