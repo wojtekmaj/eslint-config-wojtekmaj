@@ -35,6 +35,7 @@ This config is designed to be run alongside Prettier.
 
 ### Basic flavor
 
+- `@typescript-eslint/consistent-type-definitions`: Changed to prefer types over interfaces.
 - `@typescript-eslint/no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
 - `@typescript-eslint/no-use-before-define`: Set to `"error"`.
 - `import/no-named-as-default`: Turned off.
