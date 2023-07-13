@@ -5,10 +5,12 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/stylistic',
   ],
   parser: requireResolveCwd('@typescript-eslint/parser'),
   plugins: ['@typescript-eslint'],
   rules: {
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
