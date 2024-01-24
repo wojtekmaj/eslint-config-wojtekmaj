@@ -18,6 +18,7 @@ with a few changes and enhancements:
 - **No need to install any plugins manually**: All required plugins and parsers are marked as `dependencies`, not `peerDependencies`, so you don't need to install them on your own.
 - Certain rules were overwritten (details below).
 - React flavor assumes JSX automatic runtime is turned on.
+- Better support for `vite-plugin-pwa` and other Vite plugins using `virtual:*` imports.
 
 This config is designed to be run alongside Prettier.
 
@@ -39,6 +40,7 @@ This config is designed to be run alongside Prettier.
 - `@typescript-eslint/no-unused-vars`: `ignoreRestSiblings` flag set to `true`.
 - `@typescript-eslint/no-use-before-define`: Set to `"error"`.
 - `import/no-named-as-default`: Turned off.
+- `import/no-unresolved`: Kept at `"error"`, but ignoring `virtual:*` imports.
 - `no-self-compare``: Set to `"error"`.
 - `no-template-curly-in-string`: Set to `"warn"`.
 - `no-unused-vars`: `ignoreRestSiblings` flag set to `true`.

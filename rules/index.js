@@ -11,6 +11,7 @@ module.exports = {
   plugins: ['import'],
   rules: {
     'import/no-named-as-default': 'off',
+    'import/no-unresolved': ['error', { ignore: ['^virtual:'] }],
     'no-self-compare': 'error',
     'no-template-curly-in-string': 'warn',
     'no-unused-vars': [
