@@ -5,7 +5,7 @@
   "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
   "scripts": {
     "lint": "eslint .",
-    "postinstall": "husky install",
+    "postinstall": "husky",
     "prettier": "prettier --check . --cache",
     "test": "yarn lint && yarn prettier"
   },
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^8.26.0",
-    "husky": "^8.0.0",
+    "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.0.0",
     "typescript": "^5.3.2"
