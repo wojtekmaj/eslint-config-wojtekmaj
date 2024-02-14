@@ -644,7 +644,7 @@ __metadata:
     prettier: "npm:^3.0.0"
     typescript: "npm:^5.3.2"
   peerDependencies:
-    eslint: ^7.0.0 || ^8.0.0
+    eslint: ^8.56.0
   languageName: unknown
   linkType: soft
 
