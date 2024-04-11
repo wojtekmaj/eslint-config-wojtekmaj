@@ -52,14 +52,19 @@ const config = {
   overrides: [
     {
       files: ['*.js', '*.jsx'],
-      extends: ['plugin:import/recommended'],
       rules: {
+        /**
+         * Equivalent to plugin:import/recommended, but without parserOptions override, and with
+         * better support for `vite-plugin-pwa` and other Vite plugins using `virtual:*` imports.
+         */
         'import/default': 'error',
         'import/export': 'error',
         'import/named': 'error',
         'import/namespace': 'error',
         'import/no-named-as-default-member': 'warn',
         'import/no-unresolved': ['error', { ignore: ['^virtual:'] }],
+        'import/no-named-as-default': 'warn',
+        'import/no-duplicates': 'warn',
       },
     },
     {
