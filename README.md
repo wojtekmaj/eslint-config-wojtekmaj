@@ -1,4 +1,4 @@
-[![CI](https://github.com/wojtekmaj/eslint-config-wojtekmaj/actions/workflows/ci.yml/badge.svg)](https://github.com/wojtekmaj/eslint-config-wojtekmaj/actions)
+[![npm](https://img.shields.io/npm/v/eslint-config-wojtekmaj.svg)](https://www.npmjs.com/package/eslint-config-wojtekmaj) ![downloads](https://img.shields.io/npm/dt/eslint-config-wojtekmaj.svg) [![CI](https://github.com/wojtekmaj/eslint-config-wojtekmaj/actions/workflows/ci.yml/badge.svg)](https://github.com/wojtekmaj/eslint-config-wojtekmaj/actions)
 
 # eslint-config-wojtekmaj
 
