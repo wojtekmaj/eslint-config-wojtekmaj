@@ -4,8 +4,6 @@
  * @param {string} moduleName
  * @returns {string}
  */
-function requireResolveCwd(moduleName) {
+export default function requireResolveCwd(moduleName: string): string {
   return require.resolve(moduleName, { paths: [process.cwd()] });
 }
-
-module.exports = requireResolveCwd;

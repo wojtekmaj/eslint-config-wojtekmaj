@@ -5,6 +5,7 @@
 .cache
 .playwright
 .tmp
+.tsimp
 *.tsbuildinfo
 .eslintcache
 

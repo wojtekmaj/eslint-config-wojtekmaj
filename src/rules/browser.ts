@@ -1,6 +1,5 @@
-/** @typedef {import('../types.js').Config} Config */
+import type { Config } from '../types.js';
 
-/** @type {Config} */
 const config = {
   env: {
     browser: true,
@@ -9,6 +8,6 @@ const config = {
     'no-alert': 'warn',
     'no-console': 'warn',
   },
-};
+} satisfies Config;
 
-module.exports = config;
+export default config;

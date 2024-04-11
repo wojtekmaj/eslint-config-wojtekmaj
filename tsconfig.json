@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
     "declaration": true,
     "esModuleInterop": true,
     "isolatedModules": true,
@@ -13,5 +11,6 @@
     "strict": true,
     "target": "es5",
     "verbatimModuleSyntax": true
-  }
+  },
+  "exclude": ["dist"]
 }
