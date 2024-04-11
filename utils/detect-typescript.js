@@ -1,6 +1,10 @@
 const path = require('node:path');
 
-// Detect TypeScript dependency
+/**
+ * Detects if the project uses TypeScript.
+ *
+ * @returns {boolean}
+ */
 function detectTypeScript() {
   const root = process.cwd();
 

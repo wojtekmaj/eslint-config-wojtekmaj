@@ -1,4 +1,7 @@
-module.exports = {
+/** @typedef {import('../types').Config} Config */
+
+/** @type {Config} */
+const config = {
   extends: [
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
@@ -23,5 +26,6 @@ module.exports = {
       version: 'detect',
     },
   },
-  overrides: [],
 };
+
+module.exports = config;

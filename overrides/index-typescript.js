@@ -1,6 +1,9 @@
 const requireResolveCwd = require('../utils/require-resolve-cwd');
 
-module.exports = [
+/** @typedef {import('../types').Config} Config */
+
+/** @type {Exclude<Config['overrides'], undefined>} */
+const overrides = [
   {
     files: ['*.ts', '*.tsx'],
     extends: [
@@ -30,3 +33,5 @@ module.exports = [
     },
   },
 ];
+
+module.exports = overrides;

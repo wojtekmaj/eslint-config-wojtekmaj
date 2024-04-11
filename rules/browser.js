@@ -1,4 +1,7 @@
-module.exports = {
+/** @typedef {import('../types').Config} Config */
+
+/** @type {Config} */
+const config = {
   env: {
     browser: true,
   },
@@ -7,3 +10,5 @@ module.exports = {
     'no-console': 'warn',
   },
 };
+
+module.exports = config;

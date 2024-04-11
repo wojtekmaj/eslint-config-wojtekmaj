@@ -1,3 +1,10 @@
+/**
+ * Merge multiple objects into one.
+ *
+ * @param {Record<string, any>} a
+ * @param {...Record<string, any>} others
+ * @returns {Record<string, any>}
+ */
 function merge(a, ...others) {
   const result = {
     ...a,

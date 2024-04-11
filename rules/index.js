@@ -1,4 +1,7 @@
-module.exports = {
+/** @typedef {import('../types').Config} Config */
+
+/** @type {Config} */
+const config = {
   env: {
     es6: true,
     node: true,
@@ -59,3 +62,5 @@ module.exports = {
     },
   ],
 };
+
+module.exports = config;
