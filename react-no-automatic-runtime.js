@@ -1,7 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 
-import reactNoAutomaticRuntimeConfig from './react-no-automatic-runtime-legacy.js';
+import reactNoAutomaticRuntimeConfig from './react-no-automatic-runtime-legacy.cjs';
 
 const compat = new FlatCompat({
   baseDirectory: process.cwd(),

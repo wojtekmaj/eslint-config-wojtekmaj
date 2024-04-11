@@ -1,4 +1,4 @@
-/** @typedef {import('../types.js').Config} Config */
+/** @typedef {import('../types.cjs').Config} Config */
 
 /** @type {Exclude<Config['overrides'], undefined>} */
 const overrides = [

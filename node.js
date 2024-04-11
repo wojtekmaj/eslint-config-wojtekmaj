@@ -1,7 +1,7 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 
-import nodeConfig from './node-legacy.js';
+import nodeConfig from './node-legacy.cjs';
 
 const compat = new FlatCompat({
   baseDirectory: process.cwd(),
