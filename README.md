@@ -13,10 +13,10 @@ Set of default, recommended rules from:
 
 with a few changes and enhancements:
 
-- **Automatic TypeScript detection**: `@typescript-eslint/parser` will parse your TypeScript files, provided that TypeScript has been installed in your project.
-- **Automatic Jest detection**: `jest` environment will be set for files matching `**/*.spec.js`, `**/*.spec.jsx`, `**/*.spec.ts`, `**/*.spec.tsx`, `**/__tests__/*` patterns, provided that Jest has been installed in your project.
-- **No need to install any plugins manually**: All required plugins and parsers are marked as `dependencies`, not `peerDependencies`, so you don't need to install them on your own.
+- **Out-of-the-box TypeScript support**: `@typescript-eslint/parser` will parse your TypeScript files.
+- **No need to install any plugins manually**: All required plugins and parsers are automatically installed so you don't need to install them on your own.
 - Certain rules were overwritten (details below).
+- Certain rules from `eslint-plugin-import` were turned off in TypeScript files, as they are already covered by TypeScript itself.
 - React flavor assumes JSX automatic runtime is turned on.
 - Better support for `vite-plugin-pwa` and other Vite plugins using `virtual:*` imports.
 

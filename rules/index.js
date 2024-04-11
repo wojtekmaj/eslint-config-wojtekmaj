@@ -1,3 +1,5 @@
+const requireResolveCwd = require('../utils/require-resolve-cwd.js');
+
 /** @typedef {import('../types.js').Config} Config */
 
 /** @type {Config} */
@@ -6,15 +8,24 @@ const config = {
     es6: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:import/recommended'],
+  extends: ['eslint:recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: ['import'],
   rules: {
-    'import/no-named-as-default': 'off',
-    'import/no-unresolved': ['error', { ignore: ['^virtual:'] }],
+    /**
+     * The following rules are only enabled for .js and .jsx files, since TypeScript files are
+     * already checked by the TypeScript compiler.
+     * - import/default (replaced by TS1192)
+     * - import/export (TS2528)
+     * - import/named (TS2305)
+     * - import/namespace (TS2339)
+     * - import/no-named-as-default-member (TS2339)
+     * - import/no-unresolved (TS2307)
+     */
+    'import/no-duplicates': 'warn',
     'no-self-compare': 'error',
     'no-template-curly-in-string': 'warn',
     'no-unused-vars': [
@@ -40,6 +51,51 @@ const config = {
     },
   },
   overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      extends: ['plugin:import/recommended'],
+      rules: {
+        'import/default': 'error',
+        'import/export': 'error',
+        'import/named': 'error',
+        'import/namespace': 'error',
+        'import/no-named-as-default-member': 'warn',
+        'import/no-unresolved': ['error', { ignore: ['^virtual:'] }],
+      },
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/stylistic',
+      ],
+      parser: requireResolveCwd('@typescript-eslint/parser'),
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            ignoreRestSiblings: true,
+          },
+        ],
+        '@typescript-eslint/no-use-before-define': 'error',
+        'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
+      },
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        '@typescript-eslint/consistent-type-definitions': 'off',
+      },
+    },
     {
       files: [
         'vite.config.js',
