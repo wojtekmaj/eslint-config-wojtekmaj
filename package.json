@@ -4,20 +4,7 @@
   "description": "ESLint configuration by wojtekmaj",
   "type": "module",
   "sideEffects": false,
-  "main": "./dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./index": "./dist/index.js",
-    "./index.js": "./dist/index.js",
-    "./browser": "./dist/browser.js",
-    "./browser.js": "./dist/browser.js",
-    "./node": "./dist/node.js",
-    "./node.js": "./dist/node.js",
-    "./react": "./dist/react.js",
-    "./react.js": "./dist/react.js",
-    "./react-no-automatic-runtime": "./dist/react-no-automatic-runtime.js",
-    "./react-no-automatic-runtime.js": "./dist/react-no-automatic-runtime.js"
-  },
+  "main": "./index.js",
   "scripts": {
     "build": "yarn build-js && yarn build-package && yarn build-patch-cjs",
     "build-js": "tsc --project tsconfig.build.json",
