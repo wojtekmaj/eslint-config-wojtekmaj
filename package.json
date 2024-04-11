@@ -2,7 +2,7 @@
   "name": "eslint-config-wojtekmaj",
   "version": "0.11.0",
   "description": "ESLint configuration by wojtekmaj",
-  "type": "commonjs",
+  "type": "module",
   "sideEffects": false,
   "main": "./index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@eslint/eslintrc": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "eslint-import-resolver-typescript": "^3.5.0",
@@ -31,8 +32,9 @@
     "eslint-plugin-react-hooks": "^4.3.0"
   },
   "devDependencies": {
+    "@types/eslint__eslintrc": "^2.1.1",
     "@types/node": "*",
-    "eslint": "^8.56.0",
+    "eslint": "^9.0.0",
     "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.2.0",

@@ -5,7 +5,7 @@ const detectJest = require('./utils/detect-jest.js');
 
 /** @type {Config} */
 const rules = merge(
-  ...[require('./index.js'), require('./rules/browser.js'), require('./rules/react.js')],
+  ...[require('./index-legacy.js'), require('./rules/browser.js'), require('./rules/react.js')],
 );
 
 if (detectJest()) {

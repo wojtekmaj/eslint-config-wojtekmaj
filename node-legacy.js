@@ -3,6 +3,6 @@ const merge = require('./utils/merge.js');
 /** @typedef {import('./types.js').Config} Config */
 
 /** @type {Config} */
-const rules = merge(...[require('./react.js'), require('./rules/react-no-automatic-runtime.js')]);
+const rules = merge(...[require('./index-legacy.js'), require('./rules/node.js')]);
 
 module.exports = rules;
