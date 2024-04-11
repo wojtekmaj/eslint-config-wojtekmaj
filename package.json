@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wojtekmaj",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "ESLint configuration by wojtekmaj",
   "type": "commonjs",
   "sideEffects": false,
