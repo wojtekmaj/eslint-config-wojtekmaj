@@ -1,8 +1,10 @@
 {
   "name": "eslint-config-wojtekmaj",
   "version": "0.11.0",
-  "main": "index.js",
-  "author": "Wojciech Maj <kontakt@wojtekmaj.pl>",
+  "description": "ESLint configuration by wojtekmaj",
+  "type": "commonjs",
+  "sideEffects": false,
+  "main": "./index.js",
   "scripts": {
     "lint": "eslint .",
     "postinstall": "husky",
@@ -10,6 +12,15 @@
     "test": "yarn lint && yarn tsc && yarn prettier",
     "tsc": "tsc"
   },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": {
+    "name": "Wojciech Maj",
+    "email": "kontakt@wojtekmaj.pl"
+  },
+  "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
