@@ -1,14 +1,18 @@
-/** @typedef {import('../types.js').Config} Config */
+import globals from 'globals';
 
-/** @type {Config} */
-const config = {
-  env: {
-    browser: true,
-  },
-  rules: {
-    'no-alert': 'warn',
-    'no-console': 'warn',
-  },
-};
+/**
+ * @typedef {import('../types.js').Config} Config
+ */
 
-module.exports = config;
+/** @type {Config[]} */
+export default [
+  {
+    languageOptions: {
+      globals: globals.browser,
+    },
+    rules: {
+      'no-alert': 'warn',
+      'no-console': 'warn',
+    },
+  },
+];

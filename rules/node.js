@@ -1,10 +1,14 @@
-/** @typedef {import('../types.js').Config} Config */
+import globals from 'globals';
 
-/** @type {Config} */
-const config = {
-  env: {
-    node: true,
+/**
+ * @typedef {import('../types.js').Config} Config
+ */
+
+/** @type {Config[]} */
+export default [
+  {
+    languageOptions: {
+      globals: globals.node,
+    },
   },
-};
-
-module.exports = config;
+];

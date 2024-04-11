@@ -1,29 +1,23 @@
-const detectJest = require('./utils/detect-jest.js');
-const detectTypeScript = require('./utils/detect-typescript.js');
+import indexRules from './rules/index.js';
+import jestOverrides from './overrides/index-jest.js';
+import typescriptOverrides from './overrides/index-typescript.js';
 
-/** @typedef {import('./types.js').Config} Config */
+import detectJest from './utils/detect-jest.js';
+import detectTypeScript from './utils/detect-typescript.js';
 
-/** @type {Config} */
-const rules = require('./rules/index.js');
+/**
+ * @typedef {import('./types.js').Config} Config
+ */
+
+/** @type {Config[]} */
+const rules = [...indexRules];
 
 if (detectJest()) {
-  const { overrides = [] } = rules;
-
-  rules.overrides = overrides.concat(require('./overrides/index-jest.js'));
+  rules.push(...jestOverrides);
 }
 
 if (detectTypeScript()) {
-  const { overrides = [], settings = {} } = rules;
-  const { 'import/resolver': importResolver = {} } = settings;
-
-  rules.overrides = overrides.concat(require('./overrides/index-typescript.js'));
-  rules.settings = {
-    ...settings,
-    'import/resolver': {
-      ...importResolver,
-      typescript: {},
-    },
-  };
+  rules.push(...typescriptOverrides);
 }
 
-module.exports = rules;
+export default rules;

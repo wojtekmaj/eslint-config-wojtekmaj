@@ -1,17 +1,13 @@
-const merge = require('./utils/merge.js');
-const detectJest = require('./utils/detect-jest.js');
+import indexConfig from './index.js';
 
-/** @typedef {import('./types.js').Config} Config */
+import browserRules from './rules/browser.js';
+import reactRules from './rules/react.js';
 
-/** @type {Config} */
-const rules = merge(
-  ...[require('./index.js'), require('./rules/browser.js'), require('./rules/react.js')],
-);
+/**
+ * @typedef {import('./types.js').Config} Config
+ */
 
-if (detectJest()) {
-  const { overrides = [] } = rules;
+/** @type {Config[]} */
+const rules = [...indexConfig, ...browserRules, ...reactRules];
 
-  rules.overrides = overrides.concat(require('./overrides/react-jest.js'));
-}
-
-module.exports = rules;
+export default rules;

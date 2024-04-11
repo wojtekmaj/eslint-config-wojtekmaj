@@ -1,11 +1,16 @@
-/** @typedef {import('../types.js').Config} Config */
+import reactRules from './react.js';
 
-/** @type {Config} */
-const config = {
-  rules: {
-    'react/jsx-uses-react': 'error',
-    'react/react-in-jsx-scope': 'error',
+/**
+ * @typedef {import('../types.js').Config} Config
+ */
+
+/** @type {Config[]} */
+export default [
+  ...reactRules,
+  {
+    rules: {
+      'react/jsx-uses-react': 'error',
+      'react/react-in-jsx-scope': 'error',
+    },
   },
-};
-
-module.exports = config;
+];

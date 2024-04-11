@@ -1,8 +1,13 @@
-const merge = require('./utils/merge.js');
+import indexConfig from './index.js';
 
-/** @typedef {import('./types.js').Config} Config */
+import browserRules from './rules/browser.js';
+import reactNoAutomaticRuntimeRules from './rules/react-no-automatic-runtime.js';
 
-/** @type {Config} */
-const rules = merge(...[require('./react.js'), require('./rules/react-no-automatic-runtime.js')]);
+/**
+ * @typedef {import('./types.js').Config} Config
+ */
 
-module.exports = rules;
+/** @type {Config[]} */
+const rules = [...indexConfig, ...browserRules, ...reactNoAutomaticRuntimeRules];
+
+export default rules;

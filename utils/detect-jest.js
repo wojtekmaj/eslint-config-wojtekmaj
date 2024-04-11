@@ -1,11 +1,14 @@
-const path = require('node:path');
+import path from 'node:path';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 /**
  * Detects if the project uses Jest.
  *
  * @returns {boolean}
  */
-function detectJest() {
+export default function detectJest() {
   const root = process.cwd();
 
   if (!root) {
@@ -16,5 +19,3 @@ function detectJest() {
 
   return Boolean(packageJson.devDependencies && packageJson.devDependencies.jest);
 }
-
-module.exports = detectJest;

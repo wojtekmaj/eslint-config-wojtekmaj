@@ -1,3 +1,3 @@
 import type { Linter } from 'eslint';
 
-export type Config = Linter.Config;
+export type Config = Linter.FlatConfig;

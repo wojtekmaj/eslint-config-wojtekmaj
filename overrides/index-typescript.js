@@ -1,19 +1,19 @@
-const requireResolveCwd = require('../utils/require-resolve-cwd.js');
+/**
+ * @typedef {import('../types.js').Config} Config
+ */
 
-/** @typedef {import('../types.js').Config} Config */
-
-/** @type {Exclude<Config['overrides'], undefined>} */
-const overrides = [
+/** @type {Config[]} */
+export default [
+  // 'plugin:@typescript-eslint/eslint-recommended',
+  // 'plugin:@typescript-eslint/recommended',
+  // 'plugin:@typescript-eslint/stylistic',
   {
     files: ['*.ts', '*.tsx'],
-    extends: [
-      'plugin:@typescript-eslint/eslint-recommended',
-      'plugin:@typescript-eslint/recommended',
-      'plugin:@typescript-eslint/stylistic',
-    ],
-    parser: requireResolveCwd('@typescript-eslint/parser'),
-    plugins: ['@typescript-eslint'],
+    languageOptions: {
+      // parser: '@typescript-eslint/parser',
+    },
     rules: {
+      /*
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -22,8 +22,12 @@ const overrides = [
         },
       ],
       '@typescript-eslint/no-use-before-define': 'error',
+      */
       'no-unused-vars': 'off',
       'no-use-before-define': 'off',
+    },
+    settings: {
+      'import/resolver': { typescript: {} },
     },
   },
   {
@@ -33,5 +37,3 @@ const overrides = [
     },
   },
 ];
-
-module.exports = overrides;
