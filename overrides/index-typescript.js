@@ -1,6 +1,6 @@
-const requireResolveCwd = require('../utils/require-resolve-cwd');
+const requireResolveCwd = require('../utils/require-resolve-cwd.js');
 
-/** @typedef {import('../types').Config} Config */
+/** @typedef {import('../types.js').Config} Config */
 
 /** @type {Exclude<Config['overrides'], undefined>} */
 const overrides = [

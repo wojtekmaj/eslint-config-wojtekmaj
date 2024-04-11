@@ -1,4 +1,4 @@
-/** @typedef {import('../types').Config} Config */
+/** @typedef {import('../types.js').Config} Config */
 
 /** @type {Config} */
 const config = {
