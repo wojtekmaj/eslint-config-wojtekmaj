@@ -1,6 +1,5 @@
-/** @typedef {import('../types.js').Config} Config */
+import type { Config } from '../types.js';
 
-/** @type {Config} */
 const config = {
   extends: [
     'plugin:jsx-a11y/recommended',
@@ -26,6 +25,6 @@ const config = {
       version: 'detect',
     },
   },
-};
+} satisfies Config;
 
-module.exports = config;
+export default config;

@@ -1,8 +1,7 @@
-const requireResolveCwd = require('../utils/require-resolve-cwd.js');
+import requireResolveCwd from '../utils/require-resolve-cwd.js';
 
-/** @typedef {import('../types.js').Config} Config */
+import type { Config } from '../types.js';
 
-/** @type {Config} */
 const config = {
   env: {
     es6: true,
@@ -117,6 +116,6 @@ const config = {
       },
     },
   ],
-};
+} satisfies Config;
 
-module.exports = config;
+export default config;

@@ -1,4 +1,5 @@
 .cache
+.tsimp
 .yarn
 coverage
 dist

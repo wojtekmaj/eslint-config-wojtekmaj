@@ -2,10 +2,28 @@
   "name": "eslint-config-wojtekmaj",
   "version": "0.12.0",
   "description": "ESLint configuration by wojtekmaj",
-  "type": "commonjs",
+  "type": "module",
   "sideEffects": false,
-  "main": "./index.js",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./index": "./dist/index.js",
+    "./index.js": "./dist/index.js",
+    "./browser": "./dist/browser.js",
+    "./browser.js": "./dist/browser.js",
+    "./node": "./dist/node.js",
+    "./node.js": "./dist/node.js",
+    "./react": "./dist/react.js",
+    "./react.js": "./dist/react.js",
+    "./react-no-automatic-runtime": "./dist/react-no-automatic-runtime.js",
+    "./react-no-automatic-runtime.js": "./dist/react-no-automatic-runtime.js"
+  },
   "scripts": {
+    "build": "yarn build-js && yarn build-package && yarn build-patch-cjs",
+    "build-js": "tsc --project tsconfig.build.json",
+    "build-package": "echo '{\n  \"type\": \"commonjs\"\n}' > dist/package.json",
+    "build-patch-cjs": "node --import=tsimp/import ./scripts/patch-cjs.js",
+    "clean": "rimraf dist",
     "lint": "eslint .",
     "postinstall": "husky",
     "prettier": "prettier --check . --cache",
@@ -37,6 +55,8 @@
     "husky": "^9.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.2.0",
+    "rimraf": "^3.0.0",
+    "tsimp": "^2.0.11",
     "typescript": "^5.4.2"
   },
   "peerDependencies": {
@@ -50,14 +70,8 @@
     "provenance": true
   },
   "files": [
-    "overrides",
-    "rules",
-    "utils",
-    "browser.js",
-    "index.js",
-    "node.js",
-    "react.js",
-    "react-no-automatic-runtime.js"
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
