@@ -1,3 +1,8 @@
 const merge = require('./utils/merge');
 
-module.exports = merge(...[require('./index'), require('./rules/node')]);
+/** @typedef {import('./types').Config} Config */
+
+/** @type {Config} */
+const rules = merge(...[require('./index'), require('./rules/node')]);
+
+module.exports = rules;

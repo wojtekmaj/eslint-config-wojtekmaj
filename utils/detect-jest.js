@@ -1,6 +1,10 @@
 const path = require('node:path');
 
-// Detect Jest dependency
+/**
+ * Detects if the project uses Jest.
+ *
+ * @returns {boolean}
+ */
 function detectJest() {
   const root = process.cwd();
 
