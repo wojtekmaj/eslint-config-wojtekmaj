@@ -1,13 +1,19 @@
-import type { Config } from '../types.js';
+import globals from 'globals';
 
-const config = {
-  env: {
-    browser: true,
+import type { FlatConfig } from '../types.js';
+
+const config: FlatConfig[] = [
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+    },
+    rules: {
+      'no-alert': 'warn',
+      'no-console': 'warn',
+    },
   },
-  rules: {
-    'no-alert': 'warn',
-    'no-console': 'warn',
-  },
-} satisfies Config;
+];
 
 export default config;

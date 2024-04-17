@@ -1,9 +1,15 @@
-import type { Config } from '../types.js';
+import globals from 'globals';
 
-const config = {
-  env: {
-    node: true,
+import type { FlatConfig } from '../types.js';
+
+const config: FlatConfig[] = [
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
   },
-} satisfies Config;
+];
 
 export default config;

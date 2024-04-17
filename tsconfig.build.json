@@ -1,13 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
     "noEmit": false,
     "outDir": "dist",
-    "rootDir": "src",
-    "verbatimModuleSyntax": false
+    "rootDir": "src"
   },
-  "include": ["src"],
+  "include": ["src", "custom.d.ts"],
   "exclude": ["src/**/*.spec.ts"]
 }
